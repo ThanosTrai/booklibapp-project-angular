@@ -1,6 +1,6 @@
 # Book Library Application - Front End
 
-This repository hosts the front-end part of the Book Library application. The front-end is built using Angular (standalone) and Typescript and is intended to work in conjunction with the Java Spring Boot back-end which can be found
+This repository hosts the front-end part of the Book Library application. The front-end is built using Angular and Typescript and is intended to work in conjunction with the Java Spring Boot back-end which can be found
 in a separate repository.
 
 ## Related Repository
@@ -9,15 +9,18 @@ This front-end application is designed to work with the above-mentioned back-end
 
 ## Features
 
-- Interact with the Book Club back-end to display and manage book data.
-- User authentication and profile management.
-- Search, view, and favorite books.
+- Built with Angular 16.2.0, utilizing standalone components for enhanced modularity.
+- Interact with the Book Library back-end to display and manage book data.
+- Advanced user authentication and token management with Auth Service and Auth Token Interceptor.
+- Robust search functionality allowing users to filter books by title, author, category, and ISBN.
+- Interactive user experience with the ability to favorite and unfavorite books.
+
 
 ## Environment Setup
 
 To run this project, you'll need to have the following installed on your development machine:
 
-- **Angular CLI**: Version 16.2.9
+- **Angular CLI**: Version 16.2.9 (supports standalone components)
 - **Node.js**: Version 18.16.0
 - **npm (Node Package Manager)**: Version 9.5.1
 
