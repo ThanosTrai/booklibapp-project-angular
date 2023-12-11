@@ -1,7 +1,7 @@
-# Book Library Application - Front End
+# Book Library Frontend - Educational Project
 
-This repository hosts the front-end part of the Book Library application. The front-end is built using Angular and Typescript and is intended to work in conjunction with the Java Spring Boot back-end which can be found
-in a separate repository.
+This repository hosts the front-end code of the Book Library application. This project is built using Angular and Typescript and is intended primarily for educational purposes.
+It is designed to work in conjuction with a Java Spring Boot back-end.
 
 ## Related Repository
 **Back-end (Java Spring Boot):** [Book Library Back-End Repository](https://github.com/ThanosTrai/booklibapp-project-springboot)<br>
