@@ -5,6 +5,7 @@ in a separate repository.
 
 ## Related Repository
 **Back-end (Java Spring Boot):** [Book Library Back-End Repository](https://github.com/ThanosTrai/booklibapp-project-springboot)<br>
+This front-end application is designed to work with the above-mentioned back-end repository. Make sure to set up and run the back-end application to fully utilize the features of this front-end application.
 
 ## Features
 
@@ -12,11 +13,15 @@ in a separate repository.
 - User authentication and profile management.
 - Search, view, and favorite books.
 
-## Prerequisites
+## Environment Setup
 
-- Node.js
-- NPM (Node Package Manager)
-- Angular CLI (version 16.2.9)
+To run this project, you'll need to have the following installed on your development machine:
+
+- **Angular CLI**: Version 16.2.9
+- **Node.js**: Version 18.16.0
+- **npm (Node Package Manager)**: Version 9.5.1
+
+These versions are recommended for compatibility with the project setup.
 
 
 ## Setup Instructions
@@ -34,3 +39,20 @@ Run the following command to install the required dependencies:
 ```bash
 npm install
 ```
+
+### Running the Application
+
+```bash
+ng serve
+```
+This application will be available at `http://localhost:4200`.
+
+### Dependencies and Frameworks Used
+
+- **Angular**: Version 16.2.0
+- **Angular Material**: Version 16.2.12
+- **Bootstrap**: Version 5.2.3
+- **RXJS**: Reactive Extensions Library for JavaScript
+- **PrimeNG**: UI Component Suite for Angular
+- **NgBootstrap**: Angular powered Bootstrap
+- And other libraries as listed in `package.json`.
