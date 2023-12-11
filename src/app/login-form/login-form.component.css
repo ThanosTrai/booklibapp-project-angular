@@ -1,0 +1,19 @@
+body {
+  font-size: 1.1rem;
+}
+.login-card {
+  padding: 5rem;
+  margin-top: 2rem;
+  background-color: #c5c6c7;
+}
+.login-form input[type="email"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+  font-size: 1.2rem;
+}
+.login-form label {
+  font-size: 1.1rem;
+}
+.login-form .form-group:last-child {
+  margin-bottom: 3rem;
+}

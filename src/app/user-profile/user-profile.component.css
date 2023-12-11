@@ -1,0 +1,18 @@
+
+.profile-picture-container {
+    width: 180px; /* Adjust size as needed */
+    height: 180px; /* Adjust size as needed */
+    border-radius: 50%; /* Makes the div circular */
+    overflow: hidden; /* Ensures the image doesn't overflow */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px; /* Space between the image and the first name field */
+}
+.profile-picture-container img {
+    width: 100%;
+    height: auto;
+    min-height: 100%; /* ensures that the image covers the full height */
+    object-fit: cover;
+}

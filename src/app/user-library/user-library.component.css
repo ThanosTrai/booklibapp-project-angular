@@ -1,0 +1,12 @@
+.book-thumbnail {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .card {
+    width: 75%;
+    /* max-width: 220px; */
+  }
+  

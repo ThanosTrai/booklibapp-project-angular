@@ -1,0 +1,16 @@
+<div class="container my-5">
+    <h2 class="my-4 text-center" style="color: #66fcf1;">My Favorite Books</h2>
+    <div class="row justify-content-center">
+      
+      <div *ngFor="let book of favoriteBooks" class="col-md-4 col-lg-3 d-flex align-items-stretch">
+        <div class="card my-3" (click)="goToBookDetail(book.id)" style="cursor: pointer;">
+          <img *ngIf="book.smallThumbnail" [src]="book.smallThumbnail" [alt]="book.title" class="card-img-top book-thumbnail">
+          <div class="card-body">
+            <h5 class="card-title">{{ book.title }}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

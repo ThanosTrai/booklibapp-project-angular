@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+      <div class="col-lg-6">
+        <form [formGroup]="regForm" class="d-flex flex-column gap-2" (ngSubmit)="onRegister()">
+          <h1 style="color: #66FCF1;">Register</h1>
+          <p style="color: #45A29E;">Please fill in this form to create an account.</p>
+          <hr>
+  
+          <!-- Username Field -->
+          <div class="form-group mb-3">
+            <label for="username" class="text-label"><b>Username</b></label>
+            <input type="text" class="form-control" formControlName="username" placeholder="Enter Username" id="username">
+            <div *ngIf="regForm.get('username')?.invalid && regForm.get('username')?.touched" class="text-danger">
+              Username must not be empty and contain at least 5 characters.
+            </div>
+          </div>
+  
+          <!-- Email Field -->
+          <div class="form-group mb-3">
+            <label for="email" class="text-label"><b>Email</b></label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter Email" id="email">
+            <div *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched" class="text-danger">
+              Email is required and must be in a valid format.
+            </div>
+          </div>
+  
+          <!-- Password Field -->
+          <div class="form-group mb-3">
+            <label for="password" class="text-label"><b>Password</b></label>
+            <input type="password" class="form-control" formControlName="password" placeholder="Αt least 6 characters" id="password">
+            <div *ngIf="regForm.get('password')?.touched">
+              <div *ngIf="regForm.get('password')?.errors?.['required']" class="text-danger">Password is required.</div>
+              <div *ngIf="regForm.get('password')?.errors?.['minlength']" class="text-danger">Password must be at least 6 characters.</div>
+              <div *ngIf="regForm.get('password')?.errors?.['pattern']" class="text-danger">Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character.</div>
+            </div>
+          </div>
+  
+          <!-- Confirm Password Field -->
+          <div class="form-group mb-3">
+            <label for="confirmPassword" class="text-label"><b>Confirm Password</b></label>
+            <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password" id="confirmPassword">
+            <div *ngIf="regForm.get('confirmPassword')?.invalid && regForm.get('confirmPassword')?.touched" class="text-danger">
+              Confirm Password should match the Password field.
+            </div>
+          </div>
+  
+          <hr>
+  
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary w-100" [disabled]="!regForm.valid">Register</button>
+          </div>
+  
+          <div class="text-center text-label">
+            <p>Already have an account? <a routerLink="/login">Sign in</a>.</p>
+          </div>
+        </form>
+  
+        <!-- Error Messages Display -->
+        <div *ngIf="errorMessages.length > 0" class="alert alert-danger">
+            <ul>
+                <li *ngFor="let message of errorMessages">{{ message }}</li>
+              </ul>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,12 @@
+<div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="filterDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+      Filter
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+      <li><button class="dropdown-item" (click)="onFilterSelect('title')">Title</button></li>
+      <li><button class="dropdown-item" (click)="onFilterSelect('author')">Author</button></li>
+      <li><button class="dropdown-item" (click)="onFilterSelect('category')">Category</button></li>
+      <li><button class="dropdown-item" (click)="onFilterSelect('isbn')">ISBN</button></li>
+    </ul>
+</div>
+  

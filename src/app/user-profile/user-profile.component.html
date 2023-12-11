@@ -1,0 +1,60 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form [formGroup]="userProfileForm" (ngSubmit)="onSubmit()" class="border p-4 bg-light">
+        <div class="mb-3">
+          <div class="profile-picture-container">
+            <img [src]="profileImageUrl" (error)="profileImageUrl = 'assets/images/default-profile.jpg'" alt="Profile Image">
+          </div>
+          <label for="firstname" class="form-label">First Name</label>
+          <input type="text" id="firstname" class="form-control" formControlName="firstname" placeholder="First Name">
+          <div *ngIf="userProfileForm.get('firstname')?.errors && (userProfileForm.get('firstname')?.dirty || userProfileForm.get('firstname')?.touched)">
+            <small class="text-danger" *ngIf="userProfileForm.get('firstname')?.errors?.['minlength']">First name must be at least 3 characters.</small>
+            <small class="text-danger" *ngIf="userProfileForm.get('firstname')?.errors?.['maxlength']">First name must be less than 30 characters.</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Last Name</label>
+          <input type="text" id="lastname" class="form-control" formControlName="lastname" placeholder="Last Name">
+          <div *ngIf="userProfileForm.get('lastname')?.errors && (userProfileForm.get('lastname')?.dirty || userProfileForm.get('lastname')?.touched)">
+            <small class="text-danger" *ngIf="userProfileForm.get('lastname')?.errors?.['minlength']">Last name must be at least 3 characters.</small>
+            <small class="text-danger" *ngIf="userProfileForm.get('lastname')?.errors?.['maxlength']">Last name must be less than 30 characters.</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" formControlName="password" placeholder="Password">
+          <div *ngIf="userProfileForm.get('password')?.errors && (userProfileForm.get('password')?.dirty || userProfileForm.get('password')?.touched)">
+            <small class="text-danger" *ngIf="userProfileForm.get('password')?.errors?.['pattern']">
+              Password must be at least 6 characters, including at least one uppercase letter, one lowercase letter, one number, and one special character.
+            </small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="dateOfBirth" class="form-label">Date of Birth</label>
+          <input type="date" id="dateOfBirth" class="form-control" formControlName="dateOfBirth">
+        </div>
+
+        <div class="mb-3">
+          <label for="profilePicture" class="form-label">Profile Picture URL</label>
+          <input type="text" id="profilePicture" class="form-control" formControlName="profilePicture" placeholder="Profile Picture URL">
+          <div *ngIf="userProfileForm.get('profilePicture')?.errors && (userProfileForm.get('profilePicture')?.dirty || userProfileForm.get('profilePicture')?.touched)">
+            <small class="text-danger" *ngIf="userProfileForm.get('profilePicture')?.errors?.['pattern']">
+              Please enter a valid URL.
+            </small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!userProfileForm.valid">Update Profile</button>
+      </form>
+
+      <div class="text-center mt-4">
+        <button class="btn btn-danger" (click)="confirmAccountDeletion()">Delete My Account</button>
+      </div>
+    </div>
+  </div>
+</div>
+

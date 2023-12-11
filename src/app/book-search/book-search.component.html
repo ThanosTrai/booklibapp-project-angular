@@ -1,0 +1,4 @@
+<form class="d-flex" (submit)="onFormSubmit($event)">
+    <input class="form-control me-2" type="search" placeholder="Search Books" aria-label="Search" [(ngModel)]="searchQuery" [ngModelOptions]="{standalone: true}">
+    <button class="btn btn-primary " type="submit">Search</button>
+  </form>

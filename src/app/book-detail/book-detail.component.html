@@ -1,0 +1,52 @@
+<div *ngIf="book;" class="container my-5">
+  <div class="row">
+    <!-- Book Image -->
+    <div class="col-md-6 text-center">
+      <img *ngIf="book.book.volumeInfo?.imageLinks?.thumbnail" [src]="book.book.volumeInfo.imageLinks.thumbnail" class="img-fluid img-large" alt="Book cover">
+        <p *ngIf="!book.book?.volumeInfo?.imageLinks?.thumbnail">Thumbnail not available</p>
+
+        <!-- Favourite toggleable button -->
+      <div class="container my-5">
+        <button *ngIf="book" (click)="toggleFavorite()"
+                [ngClass] ="{'btn-lg': true, 'btn-success': !book.favorited, 'btn-danger': book.favorited, 'mt-3': true}"
+                class="btn">
+          {{ book.favorited ? 'Remove from Favorites' : 'Add to Favorites' }}
+        </button>
+      </div>
+    </div>
+
+    <!-- Book Details -->
+    
+    <div class="col-md-6">
+      <div class="mb-3">
+        <h1 style="color: #66fcf1;">{{ book.book.volumeInfo.title }}</h1>
+      </div>
+
+      <div class="mb-3">
+        <p class="font-weight-bold">Authors:</p>
+        <p class="font-size-lg" style="color: rgb(202, 184, 20)">{{ book.book.volumeInfo.authors?.join(', ') }}</p>
+      </div>
+
+      <div class="mb-3">
+        <p class="font-weight-bold">Description:</p>
+        <div style="color: #c5c6c7;" [innerHTML]="book.book.volumeInfo.description"></div>
+      </div>
+
+      <div class="mb-3">
+        <p class="font-weight-bold">Categories:</p>
+        <p class="font-size-sm">{{ book.book.volumeInfo.categories?.join(', ') }}</p>
+      </div>
+
+      <div class="mb-3">
+        <p class="font-weight-bold">Page Count:</p>
+        <p class="font-size-sm">{{ book.book.volumeInfo.pageCount }}</p>
+      </div>
+
+      <div class="mb-3">
+        <p class="font-weight-bold">Published Date:</p>
+        <p class="font-size-sm">{{ book.book.volumeInfo.publishedDate }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

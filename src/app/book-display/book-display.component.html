@@ -1,0 +1,15 @@
+<div *ngIf="books" class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-6 g-3 justify-content-center">
+    <div *ngFor="let book of books" class="col" (click)="onBookSelect(book)">
+      <div class="card h-100 text-center">
+        <div class="card-img-container">
+          <img *ngIf="book?.volumeInfo?.imageLinks?.bestAvailableImage;" [src]="book.volumeInfo.imageLinks.bestAvailableImage" alt="Book thumbnail" class="card-img-top img-fluid">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ book?.volumeInfo?.title }}</h5>
+          <p class="card-text">Author: {{ book?.volumeInfo?.authors?.join(', ') }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

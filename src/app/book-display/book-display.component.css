@@ -1,0 +1,35 @@
+
+.card {
+    background-color: #c5c6c7;
+    display: flex;
+    flex-direction: column;
+    min-height: 380px;
+  }
+  
+  .card-img-container {
+    height: 250px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-img-top {
+    max-height: 100%;
+    max-width: 100%; 
+    object-fit: contain; 
+  }
+  
+  .card-body {
+    background-color: #c5c6c7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    flex-grow: 1;
+  }
+  
+  .card-title {
+    margin-bottom: auto;
+  }
+
+  
+  

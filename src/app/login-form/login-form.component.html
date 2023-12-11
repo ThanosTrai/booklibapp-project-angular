@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+      <div class="col-md-8 col-lg-6">
+          <div class="card login-card">
+              <h1 class="text-center">Login</h1>
+              <form [formGroup]="loginForm" (ngSubmit)="onLogin()" class="login-form d-flex flex-column">
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" name="email" id="email" formControlName="email" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" class="form-control" name="password" id="password" formControlName="password" required>
+                  </div>
+                  <div class="mb-3 text-center">
+                      <a href="#" class="text-decoration-none">Forget Password?</a>
+                  </div>
+                  <div class="mb-3">
+                      <input name="submit" type="Submit" value="Login" class="btn btn-primary w-100">
+                  </div>
+                  <div class="text-center">
+                      Not a Member? <a routerLink="/register" class="text-decoration-none">Signup</a>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
