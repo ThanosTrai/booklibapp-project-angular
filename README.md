@@ -1,4 +1,4 @@
-## Book Library Application - Front End
+### Book Library Application - Front End
 
 This repository hosts the front-end part of the Book Club application. The front-end is built using Angular and is intended to work in conjunction with the Java Spring Boot back-end which can be found
 in a separate repository.
@@ -25,4 +25,4 @@ in a separate repository.
 
 ```bash
 git clone https://github.com/ThanosTrai/booklibapp-project-angular.git
-cd booklibapp-frontend
+cd booklibapp-project-angular
